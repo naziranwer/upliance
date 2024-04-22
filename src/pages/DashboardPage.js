@@ -7,7 +7,7 @@ import ShowIdForm from "../components/showIdForm";
 import Header from "../components/Header";
 
 const DashboardPage = () => {
-  const [savedData, setSavedData] = useState(localStorage.getItem('formData') || 'empty');
+  const [savedData, setSavedData] = useState(JSON.parse(localStorage.getItem('formData')) || {});
   console.log('saved data in dashboard',savedData);
   // Function to update form data and save to localStorage
   const updateSaveData = (data) => {

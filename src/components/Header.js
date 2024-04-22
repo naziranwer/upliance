@@ -31,6 +31,7 @@ const Header = () => {
       } else {
         // User is signed out
         localStorage.removeItem("user");
+        localStorage.removeItem("formData");
         navigate("/");
       }
     });
